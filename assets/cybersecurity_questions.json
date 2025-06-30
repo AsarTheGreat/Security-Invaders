@@ -1,0 +1,47 @@
+[
+    {
+        "question": "What does 'HTTPS' stand for?",
+        "options": [
+            "A) Hypertext Transfer Protocol Standard",
+            "B) Hypertext Transfer Protocol Secure",
+            "C) High Transfer Protocol Secure"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "What is a common form of phishing attack?",
+        "options": [
+            "A) Email",
+            "B) Phone call",
+            "C) USB stick"
+        ],
+        "answer": "A"
+    },
+    {
+        "question": "Which type of malware locks your files and demands payment?",
+        "options": [
+            "A) Virus",
+            "B) Worm",
+            "C) Ransomware"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "What is a strong password?",
+        "options": [
+            "A) Your birthdate",
+            "B) A combination of letters, numbers, and symbols",
+            "C) Your pet's name"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "What does '2FA' stand for?",
+        "options": [
+            "A) Two-Factor Authentication",
+            "B) Two-Factor Access",
+            "C) Two-Factor Allowance"
+        ],
+        "answer": "A"
+    }
+]
