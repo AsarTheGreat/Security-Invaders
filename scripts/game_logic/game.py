@@ -108,7 +108,9 @@ class Game:
         self.bold_font = pygame.font.Font("assets/fonts/TextFont.ttf", 40)
         self.title_font = pygame.font.Font("assets/fonts/TextFont.ttf", 30)  
 
-
+        '''
+        Checkpoint 1: Initializing game components
+        '''
         self.player = Player(self)
         self.boss = Boss(self)
         self.enemy_manager = EnemyManager(self)
@@ -339,6 +341,9 @@ class Game:
             self.display_thread.join()
             GPIO.cleanup()
 
+    '''
+    Checkpoint 4: main game loop
+    '''
     def main_game_loop(self):
         self.change_music(self.level_music)  # Start level music
         self.start_time = time.time()
@@ -768,6 +773,9 @@ class Game:
                         return
             pygame.time.wait(10)  
 
+    '''
+    Checkpoint 2: Entry of the game. Loading menu
+    '''
     def show_menu(self):
         # Original_menu_options = ["New Game", "Load Game", "Leaderboard", "Instructions", "Exit"]
         menu_options = ["New Game", "Instructions", "Exit"]
@@ -799,7 +807,7 @@ class Game:
             pygame.display.flip()
 
             for event in pygame.event.get():
-                print("Length of menu_options:", len(menu_options))  # Debugging info
+                #print("Length of menu_options:", len(menu_options))  # Debugging info
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_DOWN:
                         selected_option = (selected_option + 1) % len(menu_options)
@@ -1278,6 +1286,9 @@ class Game:
                     elif event.key == pygame.K_RIGHT:
                         current_page = min(len(instructions_pages) - 1, current_page + 1)
 
+    '''
+    Checkpoint 3: launch Game view
+    '''
     def reset_game(self):
         self.player.lives = 3
         self.player.x = (self.screen_width - self.player.width) // 2

@@ -51,12 +51,15 @@ class Player:
 
         return outline_surface    
 
+    '''
+    Checkpoint 5: moving the player
+    '''
     def move(self, keys):
         '''
         We only want to move left or right, hence only x is updated.
         
         Check if left or right arrow keys are pressed and add
-        or sbtract speed from x accordingly.
+        or sbtract speed from x accordingly.        
         '''
         if keys[pygame.K_LEFT]:
             self.x -= self.speed
@@ -64,6 +67,9 @@ class Player:
             self.x += self.speed
         self.x = max(0, min(self.x, self.game.screen_width - self.width))
 
+    '''
+    Checkpoint 6: player shooting
+    '''
     def shoot(self, keys):
         '''
         Get the current time

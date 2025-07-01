@@ -37,6 +37,11 @@ class BarricadeManager:
                         blocks.append({"rect": block_rect})
             self.barricades.append(blocks)
 
+    '''
+    Checkpoint 8: update barricades. Specifically barricade.remove(block)
+    This remove method removes the specific block (piece) of the barricade
+    that was hit by the enemy bullet
+    '''
     def update(self):
         for bullet in self.game.bullet_manager.enemy_bullets[:]:
             bullet_pos = (

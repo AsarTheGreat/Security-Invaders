@@ -67,6 +67,9 @@ class BulletManager:
             # Check for conditions to remove bullet
             if not draw_only and (bullet[1] < 0 or bullet[0] < 0 or bullet[0] > self.game.screen_width):
                 bullets_to_remove.append(bullet)
+            '''
+            Checkpoint 9: check for player bullet collision with enemies
+            '''
             # Check for enemy collision
             for enemy in self.game.enemy_manager.enemies[:]:
                 if (enemy[0] < x < enemy[0] + 40 and enemy[1] < y < enemy[1] + 40) or \
@@ -197,8 +200,9 @@ class BulletManager:
             elif enemy_bullet in self.enemy_bullets:
                 self.enemy_bullets.remove(enemy_bullet)
 
-
-
+    '''
+    Checkpoint 7: check if player is hit by enemy bullets
+    '''
     def check_player_hit(self):
         player_object_total_width = self.game.player.x + self.game.player.width
         player_object_total_height = self.game.player.y + self.game.player.height
